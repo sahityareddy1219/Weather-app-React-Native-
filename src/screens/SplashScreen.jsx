@@ -25,7 +25,7 @@ const SplashScreen = ({ navigation }) => {
       <StatusBar barStyle="light-content" />
       <Icon name="cloudy-outline" size={120} color="#fff" />
       <Text style={styles.title}>Weather App</Text>
-      <Text style={styles.subtitle}>Your Pocket Forecast</Text>
+      <Text style={styles.subtitle}>Your Weather Forecast App</Text>
     </LinearGradient>
   );
 };
