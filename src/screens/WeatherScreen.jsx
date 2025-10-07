@@ -9,26 +9,35 @@ const WeatherDetails = ({ data, city }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.city}>{city || data.name}, {sys.country}</Text>
+      {/* --- FIX --- */}
+      <Text style={styles.city}>{`${city || data.name}, ${sys.country}`}</Text>
+      
       <Image source={{ uri: iconUrl }} style={styles.icon} />
-      <Text style={styles.temp}>{main.temp}°C</Text>
+      
+      {/* --- FIX --- */}
+      <Text style={styles.temp}>{`${main.temp}°C`}</Text>
+      
       <Text style={styles.desc}>{weather[0].description}</Text>
 
       <View style={styles.row}>
         <Text style={styles.label}>Feels Like:</Text>
-        <Text style={styles.value}>{main.feels_like}°C</Text>
+        {/* --- FIX --- */}
+        <Text style={styles.value}>{`${main.feels_like}°C`}</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.label}>Humidity:</Text>
-        <Text style={styles.value}>{main.humidity}%</Text>
+        {/* --- FIX --- */}
+        <Text style={styles.value}>{`${main.humidity}%`}</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.label}>Pressure:</Text>
-        <Text style={styles.value}>{main.pressure} hPa</Text>
+        {/* --- FIX --- */}
+        <Text style={styles.value}>{`${main.pressure} hPa`}</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.label}>Wind:</Text>
-        <Text style={styles.value}>{wind.speed} m/s</Text>
+        {/* --- FIX --- */}
+        <Text style={styles.value}>{`${wind.speed} m/s`}</Text>
       </View>
     </View>
   );

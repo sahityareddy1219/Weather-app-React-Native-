@@ -151,7 +151,7 @@ const HomeScreen = () => {
           {loading ? (
             <ActivityIndicator size="large" color="#00ADB5" />
           ) : (
-            <>, 
+            <> 
               <Text style={styles.label}>Current Location:</Text>
               <Text style={styles.address}>{address}</Text>
               <WeatherDetails data={weatherData} city={weatherData?.cityName} />
